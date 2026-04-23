@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
@@ -81,7 +81,7 @@ const EmblaCarouselWithFramer: React.FC<PropType> = (props) => {
     };
   }, [emblaApi, onSelect]);
 
-  const cardVariants = {
+  const cardVariants: Variants = {
     inactive: {
       scale: 0.85,
       opacity: 0.6,
